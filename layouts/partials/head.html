@@ -2,6 +2,20 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
 <meta name="viewport" content="width=device-width,minimum-scale=1">
 <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}">
+
+<meta content='noindex,nofollow' name='google'>
+<meta content='noindex,nofollow' name='Googlebot'>
+<meta content='noindex,nofollow' name='Googlebot-Extended'>
+<meta content='noindex,nofollow' name='Googlebot-Image'>
+<meta content='noindex,nofollow' name='Googlebot-News'>
+<meta content='noindex,nofollow' name='Googlebot-Video'>
+<meta content='noindex,nofollow' name='Storebot-Google'>
+<meta content='noindex,nofollow' name='GoogleOther'>
+<meta content='noindex,nofollow' name='GoogleOther-Image'>
+<meta content='noindex,nofollow' name='GoogleOther-Video'>
+<meta content='noindex,nofollow' name='Google-CloudVertexBot'>
+<meta content='noindex,nofollow' name='Google-Extended'>
+
 {{ hugo.Generator }}
 {{/* NOTE: For Production make sure you add `HUGO_ENV="production"` before your build command */}}
 {{ if eq (getenv "HUGO_ENV") "production" | or (eq .Site.Params.env "production")  }}
